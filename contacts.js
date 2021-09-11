@@ -62,11 +62,14 @@ const addContact = async (name, email, phone) => {
     const contacts = await getContacts()
     const id = v4()
     const newContact = { id, name, email, phone }
-    console.log(newContact)
+    console.log(`Processing...`)
     contacts.push(newContact)
     await updateContacts(contacts)
     console.table(contacts)
-  } catch (error) {}
+    console.log(` ✔️  ${newContact.name} added to Phonebook`)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 module.exports = {
