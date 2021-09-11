@@ -63,7 +63,9 @@ const addContact = async (name, email, phone) => {
     const id = v4()
     const newContact = { id, name, email, phone }
     console.log(newContact)
-    //   contacts.push(newContact)
+    contacts.push(newContact)
+    await updateContacts(contacts)
+    console.table(contacts)
   } catch (error) {}
 }
 
