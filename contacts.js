@@ -32,7 +32,10 @@ const getContactById = async (id) => {
     const contacts = await getContacts()
     const contact = contacts.find((cont) => String(cont.id) === String(id))
 
-    if (!contact) console.log(` ⛔️ Contact with ID:${id} did't finded`)
+    if (!contact) {
+      console.log(` ⛔️ Contact with ID:${id} did't finded`)
+      return
+    }
 
     console.table(contact)
   } catch (error) {
@@ -44,14 +47,18 @@ const removeContact = async (id) => {
   try {
     const contacts = await getContacts()
 
-    const idx = contacts.findIndex((item) => item.id === id)
-    if (idx === -1) return
-    const contact = contacts.find((item) => item.id === id)
+    const idx = contacts.findIndex((cont) => String(cont.id) === String(id))
+    if (idx === -1) {
+      console.log(` ⛔️ Contact with ID:${id} did't finded`)
+      return
+    }
+    const contact = contacts.find((item) => String(item.id) === String(id))
+    console.table(contact)
     console.log(` Removing ${contact.name} from Phoneboook`)
     contacts.splice(idx, 1)
     await updateContacts(contacts)
-    console.log(`✔️ Contact deleted. `)
     console.table(contacts)
+    console.log(`✔️ Contact deleted. `)
   } catch (error) {
     console.log(error)
   }
