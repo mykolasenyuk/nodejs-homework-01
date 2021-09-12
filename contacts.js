@@ -30,7 +30,7 @@ const listContacts = async () => {
 const getContactById = async (id) => {
   try {
     const contacts = await getContacts()
-    const contact = contacts.find((cont) => cont.id === id)
+    const contact = contacts.find((cont) => String(cont.id) === String(id))
 
     if (!contact) console.log(` ⛔️ Contact with ID:${id} did't finded`)
 
