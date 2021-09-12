@@ -6,7 +6,7 @@
 
 node index.js --action list
 
-![node index.js --action list]()
+![https://ibb.co/xCMdKK9](https://ibb.co/xCMdKK9)
 
 ## Получаем контакт по id
 
