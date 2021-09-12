@@ -6,7 +6,7 @@
 
 node index.js --action list
 
-![https://ibb.co/xCMdKK9](https://ibb.co/xCMdKK9)
+![https://ibb.co/xCMdKK9](https://i.ibb.co/xCMdKK9/list.jpg)
 
 ## Получаем контакт по id
 
@@ -27,3 +27,4 @@ node index.js --action remove --id=3
 ![node index.js --action remove --id=3](https://ibb.co/M1NTyFZ)
 
 </div>
+<a href="https://ibb.co/DCT7Dfw"><img src="https://i.ibb.co/DCT7Dfw/add-Contact.jpg" alt="add-Contact" border="0"></a> <a href="https://ibb.co/4twQkvX"><img src="https://i.ibb.co/4twQkvX/getById.jpg" alt="getById" border="0"></a> <a href="https://ibb.co/xCMdKK9"><img src="https://i.ibb.co/xCMdKK9/list.jpg" alt="list" border="0"></a> <a href="https://ibb.co/M1NTyFZ"><img src="https://i.ibb.co/M1NTyFZ/remove-Contact-By-Id.jpg" alt="remove-Contact-By-Id" border="0"></a>
