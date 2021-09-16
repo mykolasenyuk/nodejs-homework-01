@@ -1,4 +1,4 @@
-const contactsOperations = require('./contacts')
+const contactsOperations = require('./contacts/contacts.js')
 const { Command } = require('commander')
 const program = new Command()
 program
@@ -12,22 +12,22 @@ program.parse(process.argv)
 
 const argv = program.opts()
 
-function invokeAction({ action, id, name, email, phone }) {
+async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case 'list':
-      contactsOperations.listContacts()
+      await contactsOperations.listContacts()
       break
 
     case 'get':
-      contactsOperations.getContactById(id)
+      await contactsOperations.getContactById(id)
       break
 
     case 'add':
-      contactsOperations.addContact(name, email, phone)
+      await contactsOperations.addContact(name, email, phone)
       break
 
     case 'remove':
-      contactsOperations.removeContact(id)
+      await contactsOperations.removeContact(id)
       break
 
     default:
